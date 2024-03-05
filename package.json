@@ -1,6 +1,6 @@
 {
-  "name": "ipkb-zh",
-  "version": "0.0.0",
+  "name": "ipkb",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",

@@ -21,6 +21,7 @@
     Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --ifm-font-family-monospace: "Jetbrains Mono", SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+  --ifm-leading-desktop: 1.25;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -44,9 +45,6 @@ html[data-theme="dark"] {
   :root {
     --ifm-font-size-base: 17px;
   }
-  h1 {
-    font-size: 2.5rem !important;
-  }
   .hero__title {
     font-size: 3rem !important;
   }
@@ -55,9 +53,6 @@ html[data-theme="dark"] {
 @media screen and (min-width: 997px) {
   :root {
     --ifm-font-size-base: 16px;
-  }
-  h1 {
-    font-size: 2.5rem !important;
   }
   .hero__title {
     font-size: 3.5rem !important;
@@ -72,8 +67,32 @@ html[data-theme="dark"] {
   }
 }
 
+div[class^='announcementBar'] {
+  background-color: var(--ifm-hero-background-color);
+  color: var(--ifm-font-color-base);
+}
+
 article {
   /* max-width: 800px; */
   margin-left: auto;
   margin-right: auto;
+}
+
+.markdown p {
+  text-indent: 2em;
+}
+
+.markdown ul p {
+  text-indent: 0 !important;
+}
+
+
+.markdown h1 {
+  font-size: 2rem;
+}
+.markdown h2 {
+  font-size: 1.25rem;
+}
+.markdown h3,h4,h5,h6 {
+  font-size: 1rem;
 }

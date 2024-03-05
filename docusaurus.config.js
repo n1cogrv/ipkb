@@ -44,14 +44,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/n1cogrv/ipkb/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/n1cogrv/ipkb/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -68,17 +68,25 @@ const config = {
       navbar: {
         title: 'Intellectual Property Knowledge Base',
         logo: {
-          alt: 'IPKB Logo',
+          alt: 'IPKB',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'legaltextSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/n1cogrv/ipkb',
             label: 'GitHub',
@@ -90,28 +98,44 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '法律法规',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '专利法',
+                to: '/docs/cn-pat-law',
               },
-            ],
+              {
+                label: '实施细则',
+                to: '/docs/cn-pat-reg',
+              },
+              {
+                label: 'MPEP',
+                href: 'https://www.uspto.gov/web/offices/pac/mpep/index.html',
+              },
+              {
+                label: 'WIPO Lex',
+                href: 'https://www.wipo.int/wipolex/'
+              },
+            ]
           },
           {
-            title: 'Community',
+            title: '快速访问',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Google Patent',
+                href: 'https://patents.google.com/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Global Dossier',
+                href: 'https://globaldossier.uspto.gov/',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Espacenet',
+                href: 'https://worldwide.espacenet.com/patent/',
+              },
+              {
+                label: '国知局审查信息查询',
+                href: 'https://cpquery.cponline.cnipa.gov.cn/',
               },
             ],
           },
@@ -124,7 +148,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/n1cogrv/ipkb',
               },
             ],
           },
@@ -139,6 +163,13 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: true,
+      },
+      announcementBar: {
+        id: 'developmentAnnouncementBar',
+        content: 'IPKB is a non-profit & non-commercial website, developed solely as a tool for me.',
+        // backgroundColor: '#fafbfc',
+        // textColor: '#091E42',
+        isCloseable: true,
       },
     }),
 };
