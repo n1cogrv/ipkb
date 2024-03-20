@@ -31,7 +31,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -83,10 +83,10 @@ const config = {
             label: 'Blog', 
             position: 'left',
           },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
+          // {
+          //   type: 'localeDropdown',
+          //   position: 'right',
+          // },
           {
             href: 'https://github.com/n1cogrv/ipkb',
             label: 'GitHub',
@@ -172,6 +172,40 @@ const config = {
         isCloseable: true,
       },
     }),
+
+    plugins: [
+      [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath){ 
+          if (existingPath === "/docs/cn-pat-law"){
+            return existingPath.replace('/docs/cn-pat-law', '/A');
+          }else if ( existingPath === "/docs/cn-pat-reg"){
+            return existingPath.replace('/docs/cn-pat-reg', '/R')
+          }
+          return undefined;
+        }
+      }
+      ],
+
+    ],
+
+    themes: [
+      [
+        "@easyops-cn/docusaurus-search-local",
+        {
+          hashed: true,
+          indexDocs: true,
+          indexBlog: false,
+          indexPages: false,
+          searchResultLimits: 8,
+          language: ["en", "zh"],
+          explicitSearchResultPath: true,
+          highlightSearchTermsOnTargetPage: true,
+
+        },
+      ],
+    ],
 };
 
 export default config;
