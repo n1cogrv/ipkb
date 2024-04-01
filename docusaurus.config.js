@@ -71,6 +71,7 @@ const config = {
           alt: 'IPKB',
           src: 'img/logo.svg',
         },
+        hideOnScroll: true,
         items: [
           {
             type: 'docSidebar',
@@ -81,6 +82,11 @@ const config = {
           {
             to: '/blog', 
             label: 'Blog', 
+            position: 'left',
+          },
+          {
+            to: '/about',
+            label: 'About',
             position: 'left',
           },
           // {
@@ -153,7 +159,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Intellectual Property Knowledge Base (aka IPKB) by Jason Chen. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Intellectual Property Knowledge Base by <a href="https://github.com/n1cogrv">Jason Chen</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
