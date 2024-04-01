@@ -201,8 +201,8 @@ const config = {
           searchResultLimits: 8,
           language: ["en", "zh"],
           explicitSearchResultPath: true,
-          highlightSearchTermsOnTargetPage: true,
-
+          highlightSearchTermsOnTargetPage: false,
+          ignoreCssSelectors: [".theme-admonition"]
         },
       ],
     ],
