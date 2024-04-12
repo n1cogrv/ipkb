@@ -38,6 +38,18 @@ const sidebars = {
       type: 'doc',
       id: 'cn-pat-reg',
     },
+    {
+      type: 'doc',
+      id: 'cn-tm-law',
+    },
+    {
+      type: 'doc',
+      id: 'cn-tm-reg',
+    },
+    {
+      type: 'doc',
+      id: 'cn-pct',
+    },
   ],
 
 };
