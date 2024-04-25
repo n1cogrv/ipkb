@@ -30,6 +30,9 @@ import { normalizeContextByPath } from "@easyops-cn/docusaurus-search-local/dist
 
 import styles from "./SearchPage.module.css";
 
+import IndexingTable from '/docs/_indexing-table.mdx';
+
+
 export default function SearchPage() {
     return (<Layout>
       <SearchPageContent />
@@ -131,6 +134,10 @@ function SearchPageContent() {
             <LoadingRing />
           </div>)}
 
+        {searchSource && !searchQuery && (<div>
+            <IndexingTable />
+          </div>)}
+
         {searchResults &&
             (searchResults.length > 0 ? (<p>
               {selectMessage(searchResults.length, translate({
@@ -175,9 +182,11 @@ function SearchResultItem({ searchResult: { document, type, page, tokens, metada
     console.log(document);
     console.log(search);
     console.log(type);
+    console.log(pathItems);
     console.log("******************\n\n")
     return (<article className={styles.searchResultItem}>
       <h3>
+        <span>{ pathItems.length > 1 ? pathItems.slice(-1) + "   ›   " : "" }</span>
         <Link to={document.u + search + (document.h || "")} dangerouslySetInnerHTML={{
             __html: isContent
                 ? highlight(articleTitle, tokens)

@@ -1,0 +1,52 @@
+---
+id: landing-page
+title: 当前可索引的法条
+slug: /
+---
+
+import SearchBar from '@easyops-cn/docusaurus-search-local/dist/client/client/theme/SearchBar/SearchBar';
+import IndexingTable from './_indexing-table.mdx'
+import clsx from 'clsx';
+
+
+
+export const MagicSearchButton = ({children}) => (
+  <a className={clsx('button button--outline button--sm button--success')} href={'/search?q='+children} >
+  {children}
+  </a>
+);
+
+export const CtrlButton = () => (
+  <kbd>CTRL | ⌘</kbd>
+);
+
+
+
+# 当前可索引的法条
+
+:::tip
+
+表格中所提供的文本均为相应文本的现行版本，其中外部参考1来自WIPO LEX站点，外部参考2来自文本所属国或地区的政府或权威站点。
+
+引用本站作为正式文书内容时，视为你已阅读并知晓[关于本站](/about)页面的内容。
+
+此外，本站提供的电子文本与标准文本不一致时，请根据中华人民共和国立法法（包括但不限于第58条、第71条、第79条、第86条）的相关规定，对应地以下列的一项或多项作为标准文本：
+
+  + 常务委员会公报上刊登的法律文本；
+  + 国务院公报上刊登的行政法规文本；
+  常务委员会公报上刊登的地方性法规、自治条例和单行条例文本；和/或
+  + 国务院公报或者部门公报和地方人民政府公报上刊登的规章文本。
+
+
+:::
+
++ 点击文本标题直达文本页面
++ 点击索引值随后输入法条序号即可定位至对应法条
++ 阁下可以在本站任意界面使用快捷键 <CtrlButton /> + <kbd>K</kbd> 激活搜索框
+  - 在搜索框内输入索引值（例如PTA22）即可快速定位至专利法第22条
+  - 在搜索框内输入搜索词（例如`驳回 月`）即可快速搜索全部文本内的相关结果
+  - 在搜索框内输入搜索词（例如<MagicSearchButton children={"驳回 月"} />）后，阁下还可以点击“查看更多结果”，在搜索页面获得更多的相关信息
+
+
+<IndexingTable />
+
