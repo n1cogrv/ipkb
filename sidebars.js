@@ -32,12 +32,46 @@ const sidebars = {
   legaltextSidebar: [
     {
       type: 'doc',
-      id: 'cn-pat-law',
+      id: 'patent-law',
     },
     {
       type: 'doc',
-      id: 'cn-pat-reg',
+      id: 'patent-regulations',
     },
+    {
+      type: 'doc',
+      id: 'trademark-law',
+    },
+    {
+      type: 'doc',
+      id: 'trademark-regulations',
+    },
+    {
+      type: 'doc',
+      id: 'copyright-law',
+    },
+    {
+      type: 'doc',
+      id: 'copyright-regulations',
+    },
+    {
+      type: 'doc',
+      id: 'plant-protection-regulations',
+    },
+    {
+      type: 'doc',
+      id: 'pct',
+    },
+    {
+      type: 'doc',
+      id: 'agency-regulations',
+    },
+    {
+      type: 'doc',
+      id: 'agency-admin-measures',
+    },
+
+
   ],
 
 };

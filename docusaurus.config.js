@@ -79,11 +79,11 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {
-            to: '/blog', 
-            label: 'Blog', 
-            position: 'left',
-          },
+          // {
+          //   to: '/blog', 
+          //   label: 'Blog', 
+          //   position: 'left',
+          // },
           {
             to: '/about',
             label: 'About',
@@ -108,11 +108,11 @@ const config = {
             items: [
               {
                 label: '专利法',
-                to: '/docs/cn-pat-law',
+                to: '/docs/patent-law',
               },
               {
                 label: '实施细则',
-                to: '/docs/cn-pat-reg',
+                to: '/docs/patent-regulations',
               },
               {
                 label: 'MPEP',
@@ -146,11 +146,11 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: '关于本站',
+                to: '/about',
               },
               {
                 label: 'GitHub',
@@ -172,7 +172,7 @@ const config = {
       },
       announcementBar: {
         id: 'developmentAnnouncementBar',
-        content: 'IPKB is a non-profit & non-commercial website, developed solely as a tool for me.',
+        content: 'IPKB is a non-profit & non-commercial website.',
         // backgroundColor: '#fafbfc',
         // textColor: '#091E42',
         isCloseable: true,
@@ -184,10 +184,10 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath){ 
-          if (existingPath === "/docs/cn-pat-law"){
-            return existingPath.replace('/docs/cn-pat-law', '/A');
-          }else if ( existingPath === "/docs/cn-pat-reg"){
-            return existingPath.replace('/docs/cn-pat-reg', '/R')
+          if (existingPath === "/docs/patent-law"){
+            return existingPath.replace('/docs/patent-law', '/A');
+          }else if ( existingPath === "/docs/patent-regulations"){
+            return existingPath.replace('/docs/patent-regulations', '/R')
           }
           return undefined;
         }
@@ -208,7 +208,8 @@ const config = {
           language: ["en", "zh"],
           explicitSearchResultPath: true,
           highlightSearchTermsOnTargetPage: false,
-          ignoreCssSelectors: [".theme-admonition"]
+          ignoreCssSelectors: [".theme-admonition"],
+          ignoreFiles: ["/docs/index.mdx", "/docs/_indexing-table.mdx"],
         },
       ],
     ],

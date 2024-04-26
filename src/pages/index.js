@@ -22,13 +22,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/cn-pat-law">
-              A-专利法 ⏱️
+              to="/docs">
+              浏览法条 📚
             </Link>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/cn-pat-reg">
-              R-实施细则 ⏱️
+              to="/search">
+              全站检索 🔍
             </Link>
           
         </div>

@@ -1,0 +1,29 @@
+name: Test Build
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+
+jobs:
+  test:
+    name: Test Build
+    timeout-minutes: 15
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          registry-url: 'https://registry.npmjs.org/'
+      - name: Installation using npm ci
+        run: npm ci
+      - name: Test Build
+        run: npm build --if-present

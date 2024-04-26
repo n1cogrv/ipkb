@@ -4,32 +4,30 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '面向知识产权',
+    Svg: require('@site/static/img/homepage-law-svg.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        所收录内容均为知识产权领域涉及的法律文本，为知识产权从业人员打造。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '快速检索 & 引用定位',
+    Svg: require('@site/static/img/homepage-search-svg.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        所有页面均可使用 <kbd>CTRL | ⌘</kbd> + <kbd>K</kbd> 激活搜索功能，快速定位至任意收录法条。
+        外部链接引用均可精确定位至具体法条，站点于全球边缘计算节点部署，为邮件交流节省篇幅。
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '离线也可大放光彩',
+    Svg: require('@site/static/img/homepage-offline-svg.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        所有功能在离线PWA模式下均不需要互联网连接，一次下载即可在离线模式下使用所有功能。
       </>
     ),
   },
@@ -53,7 +51,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={clsx("homepage-row row")}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
