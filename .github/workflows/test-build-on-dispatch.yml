@@ -20,7 +20,7 @@ on:
 jobs:
   test:
     name: Test Build on Dispatch/Demand
-    timeout-minutes: 15
+    timeout-minutes: 30
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
