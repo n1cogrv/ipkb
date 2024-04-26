@@ -193,6 +193,68 @@ const config = {
         }
       }
       ],
+      [
+        '@docusaurus/plugin-pwa',
+        {
+          offlineModeActivationStrategies: [
+            'appInstalled',
+            'standalone',
+            'queryString',
+          ],
+          injectManifestConfig: {
+            globPatterns: [
+              '**/*.{pdf,docx,doc}',
+            ],
+          },
+          pwaHead: [
+            {
+              tagName: 'link',
+              rel: 'icon',
+              href: '/img/ipkb.png',
+            },
+            {
+              tagName: 'link',
+              rel: 'manifest',
+              href: '/manifest.json',
+            },
+            {
+              tagName: 'meta',
+              name: 'theme-color',
+              content: 'rgb(29, 121, 22)',
+            },
+            {
+              tagName: 'meta',
+              name: 'apple-mobile-web-app-capable',
+              content: 'yes',
+            },
+            {
+              tagName: 'meta',
+              name: 'apple-mobile-web-app-status-bar-style',
+              content: '#1d7916',
+            },
+            {
+              tagName: 'link',
+              rel: 'apple-touch-icon',
+              href: '/img/ipkb.png',
+            },
+            {
+              tagName: 'link',
+              rel: 'mask-icon',
+              href: '/img/logo.svg',
+            },
+            {
+              tagName: 'meta',
+              name: 'msapplication-TileImage',
+              content: '/img/ipkb.png',
+            },
+            {
+              tagName: 'meta',
+              name: 'msapplication-TileColor',
+              content: '#1d7916',
+            },
+          ],
+        },
+      ],
 
     ],
 

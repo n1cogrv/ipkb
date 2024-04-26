@@ -30,7 +30,6 @@ function HomepageHeader() {
               to="/search">
               全站检索 🔍
             </Link>
-          
         </div>
       </div>
     </header>
