@@ -255,7 +255,12 @@ const config = {
           ],
         },
       ],
-
+      [
+        'vercel-analytics',
+        {
+          mode: 'auto',
+        },
+      ],
     ],
 
     themes: [
