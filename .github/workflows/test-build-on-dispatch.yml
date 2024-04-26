@@ -34,4 +34,4 @@ jobs:
       - name: Installation using npm ci
         run: npm ci --loglevel ${{ inputs.logLevel }}
       - name: Test Build
-        run: npm build --if-present --loglevel ${{ inputs.logLevel }}
+        run: npm run build --if-present --loglevel ${{ inputs.logLevel }}
