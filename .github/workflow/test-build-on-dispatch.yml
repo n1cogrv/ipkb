@@ -1,0 +1,37 @@
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'NPM Log level'
+        required: true
+        default: 'notice'
+        type: choice
+        options:
+          - silent
+          - error
+          - warn
+          - notice
+          - http
+          - timing
+          - info
+          - verbose
+          - silly
+
+jobs:
+  test:
+    name: Test Build on Dispatch/Demand
+    timeout-minutes: 15
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          registry-url: 'https://registry.npmjs.org/'
+      - name: Installation using npm ci
+        run: npm ci --loglevel ${{ inputs.logLevel }}
+      - name: Test Build
+        run: npm build --if-present --loglevel ${{ inputs.logLevel }}
