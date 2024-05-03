@@ -181,19 +181,6 @@ const config = {
 
     plugins: [
       [
-      '@docusaurus/plugin-client-redirects',
-      {
-        createRedirects(existingPath){ 
-          if (existingPath === "/docs/patent-law"){
-            return existingPath.replace('/docs/patent-law', '/A');
-          }else if ( existingPath === "/docs/patent-regulations"){
-            return existingPath.replace('/docs/patent-regulations', '/R')
-          }
-          return undefined;
-        }
-      }
-      ],
-      [
         '@docusaurus/plugin-pwa',
         {
           offlineModeActivationStrategies: [
