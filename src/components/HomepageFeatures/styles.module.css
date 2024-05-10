@@ -8,4 +8,9 @@
 .featureSvg {
   height: 150px;
   width: 150px;
+  filter: none;
+}
+
+.featureSvg[data-theme="dark"] {
+  filter: invert(100%);
 }
