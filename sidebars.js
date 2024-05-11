@@ -70,7 +70,14 @@ const sidebars = {
       type: 'doc',
       id: 'agency-admin-measures',
     },
-
+    {
+      type: 'doc',
+      id: 'admin-reconsider-law',
+    },
+    {
+      type: 'doc',
+      id: 'admin-procedure-law',
+    },
 
   ],
 
