@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: '面向知识产权',
-    Svg: require('@site/static/img/homepage-law-svg.svg').default,
+    Svg: require('@site/static/img/homepage-law-light.svg').default,
     description: (
       <>
         所收录内容均为知识产权领域涉及的法律文本，为知识产权从业人员打造。
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: '快速检索 & 引用定位',
-    Svg: require('@site/static/img/homepage-search-svg.svg').default,
+    Svg: require('@site/static/img/homepage-search-light.svg').default,
     description: (
       <>
         所有页面均可使用 <kbd>CTRL | ⌘</kbd> + <kbd>K</kbd> 激活搜索功能，快速定位至任意收录法条。
@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: '离线也可大放光彩',
-    Svg: require('@site/static/img/homepage-offline-svg.svg').default,
+    Svg: require('@site/static/img/homepage-offline-light.svg').default,
     description: (
       <>
         所有功能在离线PWA模式下均不需要互联网连接，一次下载即可在离线模式下使用所有功能。

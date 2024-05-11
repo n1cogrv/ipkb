@@ -179,14 +179,14 @@ function SearchResultItem({ searchResult: { document, type, page, tokens, metada
         }
         search = `?${params.toString()}`;
     }
-    console.log(document);
-    console.log(search);
-    console.log(type);
-    console.log(pathItems);
-    console.log("******************\n\n")
+    // console.log(document);
+    // console.log(search);
+    // console.log(type);
+    // console.log(pathItems);
+    // console.log("******************\n\n")
     return (<article className={styles.searchResultItem}>
       <h3>
-        <span>{ pathItems.length > 1 ? pathItems.slice(-1) + "   ›   " : "" }</span>
+        <span>{ pathItems.length > 1 ? pathItems[pathItems.length - 1] + "  ›  " : "" }</span>
         <Link to={document.u + search + (document.h || "")} dangerouslySetInnerHTML={{
             __html: isContent
                 ? highlight(articleTitle, tokens)

@@ -8,9 +8,9 @@
 .featureSvg {
   height: 150px;
   width: 150px;
-  filter: none;
+  filter: invert(1);
 }
 
-.featureSvg[data-theme="dark"] {
-  filter: invert(100%);
+[data-theme='dark'] .featureSvg {
+  filter: none;
 }
