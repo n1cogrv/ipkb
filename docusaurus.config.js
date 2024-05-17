@@ -177,7 +177,30 @@ const config = {
         // textColor: '#091E42',
         isCloseable: true,
       },
+      metadata: [
+        {
+          name: 'keywords',
+          content: 'IPKB, ipkb, 知产智库, 知识产权, 专利法, patent law china, intellectual property knowledge base',
+        },
+      ],
     }),
+
+    headTags: [
+      {
+        tagName: 'script',
+        attributes: {
+          type: 'application/ld+json',
+        },
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org/',
+          '@type': 'Organization',
+          name: 'Intellectual Property Knowledge Base',
+          url: 'https://ipkb.jasonchen.icu/',
+          logo: 'https://ipkb.jasonchen.icu/img/logo.svg',
+          maintainer: 'Jason Chen',
+        }),
+      }
+    ],
 
     plugins: [
       [

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /search/
+Disallow: /*.docx$
+Disallow: /*.pdf$
+Disallow: /*.doc$
