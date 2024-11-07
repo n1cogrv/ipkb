@@ -1,0 +1,21 @@
+name: Combine PRs
+
+on:
+  workflow_dispatch
+
+# The minimum permissions required to run this Action
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  combine-prs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: combine-prs
+        id: combine-prs
+        uses: github/combine-prs@v5.2.0
+        with:
+          labels: "dependencies"
